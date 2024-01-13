@@ -1,7 +1,9 @@
 import "./App.css";
 
 function App() {
-  return <h1>hrllo world</h1>;
+  return (
+    <h1 className="text-3xl font-bold underline">Welcome to Know it Today</h1>
+  );
 }
 
 export default App;
