@@ -1,5 +1,5 @@
 import { TypographyH1 } from "@/components/ui/typography";
-import Container from "../Layout/Container";
+import Container from "../../Layout/Container";
 
 import { illustration1Svg, exploreSvg } from "./assets";
 
