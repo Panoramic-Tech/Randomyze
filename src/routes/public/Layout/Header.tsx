@@ -9,9 +9,10 @@ export default function Header(props: HeaderProps) {
   const { title } = props;
   return (
     <div className="flex justify-between items-center">
-      <Link to={"/"} className="text-bold text-xl">
+      <Link to={"/"} className="font-bold text-xl">
         {title}
       </Link>
+
       <Button>Connect Wallet</Button>
     </div>
   );
