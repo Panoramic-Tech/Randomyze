@@ -8,20 +8,22 @@ import {
 } from "@/components/ui/card";
 
 type TemplateTypeWrapperProps = {
-  children: React.ReactNode;
+  title: string;
+  description: string;
+  templateBody: React.ReactNode;
+  templateFooter?: React.ReactNode;
 };
 export default function TemplateTypeWrapper(props: TemplateTypeWrapperProps) {
-  const { children } = props;
+  const { title, description, templateBody, templateFooter } = props;
+
   return (
-    <Card>
+    <Card className="bg-transparent text-white">
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>{children}</CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
+      <CardContent>{templateBody}</CardContent>
+      {templateFooter && <CardFooter>{templateFooter}</CardFooter>}
     </Card>
   );
 }
