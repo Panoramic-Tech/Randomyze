@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Container>
       <div className="flex flex-col w-full h-full justify-center">
-        <div className="flex w-full items-center pt-16">
+        <div className="flex w-full items-center gap-8 pt-16 sm:flex-col min-[300px]:flex-col md:flex-row lg:flex-row">
           <TypographyH1 className="leading-8">
             When you can’t decide “Randomyze”
           </TypographyH1>
