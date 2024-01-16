@@ -1,12 +1,15 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { PrivateRoutes, PublicRoutes } from "./routes";
+
+import "./App.css";
+import { userStore } from "./store";
+
 function App() {
-  const isAuth = true;
+  const { auth } = userStore();
   return (
     <Router>
       <Routes>
-        {isAuth
+        {auth
           ? PrivateRoutes.map((route, index) => (
               <Route key={index} path={route.path} element={route.element()} />
             ))
